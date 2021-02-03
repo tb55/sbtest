@@ -1,0 +1,135 @@
+/*body {
+    margin: 0;
+    padding: 0;
+    background-image: url("images/trophy1.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+   }
+h1,h2 {color:white;
+    text-align:center}
+
+  body:before {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .90;
+  }
+
+*/
+
+
+body {
+      margin:0;
+      font-family: sans-serif;
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* centers text horizontally */
+    text-align: center; /* centers text */
+    color: white; /*text is white so that it is visible */
+    align-items: center; /*centers text in the middle of the page, i.e., centers text vertically */
+    /* align-items: flex-start; COMMENT starts text at top of flex box */
+    
+    /*background image styles */
+    background-image: linear-gradient(rgba(0,0,0,0.86),rgba(0,0,0,0.86)),url("images/sb1.jpg"); /* background image */
+    background-size: cover; /* covers the full page */
+    background-position: center center; /* positions image at center of screen */
+    background-repeat: no-repeat; /* stops image from tiling */
+    background-attachment: fixed; /* makes the background stay in the same spot as you scroll */
+}
+
+/* show different image on iphones held vertically */
+@media (max-width: 450px){
+  .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("images/trophy3.jpg");
+  }
+}
+
+
+
+.hero h1 {
+  font-size: 3em;  /*font size for header text */
+  margin-top: 0;  /* shrinks margin just above header */
+  margin-bottom: 0.1em;  /* shrinks margin just below header */
+}
+
+.hero .btn {
+  display: block;
+  width: 100px;
+  padding: 0.5em; /* adds padding around button text */
+  margin-top: 80px; /* margin moves button down slightly */
+  margin-left: auto; /*pushes button to the right (add "margin-right: auto" to center button */
+  margin-right: auto;
+  
+  /* button font properties */
+  color: white;
+  text-decoration: none;
+  font-size: 1.5 em;
+
+  /* border styles */
+  border: 1px solid white; /* button border and color */
+  border-radius: 20px; /*rounded edges around button */
+
+  /*border background color */
+  background-color: rgba(227,24,55,0.6);
+}
+
+.hero-inner h2 {
+    font-weight: 300;
+}
+
+.my-bg-photo {
+    background: url('images/banner-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+  
+  .my-bg-photo * {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .my-bg-photo:before {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: .65;
+  }
+  
+  
+.my-custom-container {
+  max-width: 800px; 
+  background-color: cyan;
+}
+
+.accordion .btn-link:focus {
+  box-shadow: none;
+}
+
+.my-drawing {
+  transition: all .33s ease-out;
+}
+
+.my-drawing:hover {
+  transform: scale(1.054) rotate(15deg);
+}
+
+

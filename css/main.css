@@ -1,0 +1,157 @@
+/***************************
+    Site Design CSS
+***************************/
+
+#box {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  padding: 2em;
+  color: rgb(100, 25, 25);  /*this the color the header text at the very top */
+  text-align: center; /*centers all text and the table */
+  overflow: visible;
+}
+
+h1 {
+  font-family: 'sans-serif', 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 4em; /* font size of header - can make this font larger on big screens, smaller on iphone */
+  line-height: 1.3em;
+  letter-spacing: -4px;
+  margin: 0.8rem 0 0 0;
+  padding-bottom: 5px;
+}
+
+
+
+/*div for sub-header */
+#subheader {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  padding: 0.1em; /*padding above text */ 
+  font-size: 3em; /* text size */
+  color: rgb(20, 195, 95);  /*text color */
+  text-align: center; /*centers the text */
+  overflow: visible;
+} 
+
+
+
+/*@media only screen and (min-width:300px) and (max-width: 1000px) {
+	
+	.box {
+		/* padding-left: 20px; /*smaller margins */
+    /* padding-right: 20px;
+    margin: auto;
+    text-align: center; 
+    width: auto;
+	}
+	
+} */
+
+/*seems to impact font for text around squares board, should not be this way */
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em;  /* impacts size of text "Please fill out..." on squares page */
+  line-height: 1.65em; /* height of banner image */
+  margin: 0.6em auto 0.6em auto;
+  padding: 0;
+  width: 23em;
+}
+
+p.small {
+  font-size: 0.8em;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #333;
+  font-weight: 600;
+}
+
+
+/***************************
+    Google Table CSS
+***************************/
+
+/*create every other row of table starting on first player (1st row after header) */
+.google-visualization-table-tr-even,
+.google-visualization-table-tr-even td,
+.google-visualization-table-tr-even-nonstrict {
+background-color: lightgrey !important;  /*color of row fill*/
+color: #333 !important; /*text color */
+font-weight: bold;
+}
+/*create every other row of table starting on second player (2nd row after header) */
+.google-visualization-table-tr-odd,
+.google-visualization-table-tr-odd td,
+.google-visualization-table-tr-odd-nonstrict {
+background-color: gray !important; /*color of row fill*/
+color: #333 !important; /*color of text */
+font-weight: bold;
+}
+
+/* color changes when highlight a cell in the table
+.google-visualization-table-tr-sel,
+.google-visualization-table-tr-sel td,
+.google-visualization-table-tr-sel-nonstrict {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+*/
+
+/* color changes when hover mouse over table
+.google-visualization-table-tr-over,
+.google-visualization-table-tr-over td,
+.google-visualization-table-tr-over-nonstrict {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+*/
+
+/* border around/between cells of table */
+.google-visualization-table-td,
+.google-visualization-table-th {
+  border: 1px solid rgb(51, 51, 51) !important;
+  color: #fff !important;  /* color of text in header row */
+}
+
+/* very top, header, row of the table */
+.google-visualization-table-tr-head,
+.google-visualization-table-tr-head td,
+.google-visualization-table-tr-head-nonstrict {
+background-color: black !important;
+background-image: none !important;
+color: #fff !important;
+}
+
+.google-visualization-table .gradient {
+  background-image: none !important;
+}
+
+
+/***************************
+    Text Selection CSS
+***************************/
+
+::-moz-selection {
+  color: #fff;
+  background: #333;
+}
+
+::selection {
+  color: #fff;
+  background: #333;
+}
