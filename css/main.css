@@ -11,25 +11,79 @@
   height: auto;
   width: auto;
   padding: 2em;
-  color: rgb(100, 25, 25);  /*this the color the header text at the very top */
   text-align: center; /*centers all text and the table */
   overflow: visible;
 }
+
+
+ 
+
+.updates {
+  
+  display: flex;
+  justify-content: center;
+  font-weight: 1.5em; 
+  font-size:1.2em;
+  color: black;
+  width: 110vw;
+  line-height: 1.5em;
+  
+  /* white-space:pre; COMMENT THIS WAS ADDED ON ANOTHER TRY*/  
+  
+  /* old version
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em; 
+  */
+}
+
+/*
+.stripey {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size:1.2em;
+  color: cyan;
+  width: 105vw;
+  line-height: 1.25rem;
+  /* COMMENTED THIS OUT 
+  width: 50%;
+  margin: 25px auto;
+  padding: .25rem;
+  line-height: 1.25rem;  COMMENT same as color stop increments
+} 
+.stripey p {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: repeating-linear-gradient(
+    to bottom, 
+    blue, 
+    blue 1.25rem, 
+    green 1.25rem, 
+    green 2.5rem
+  );
+}
+*/
+
+
+
+
+
+
+/* COMMENTING OUT FOR NOW SO THAT BANNER IMAGE/TEXT CENTERS PROPERLY
 
 h1 {
   font-family: 'sans-serif', 'Open Sans', sans-serif;
   font-weight: 600;
   text-transform: none;
-  font-size: 4em; /* font size of header - can make this font larger on big screens, smaller on iphone */
+  font-size: 4em; /* COMMENT font size of header - can make this font larger on big screens, smaller on iphone 
   line-height: 1.3em;
   letter-spacing: -4px;
   margin: 0.8rem 0 0 0;
   padding-bottom: 5px;
 }
+END COMMENTING OUT*/
 
-
-
-/*div for sub-header */
 #subheader {
   margin: auto;
   top: 0;
@@ -47,6 +101,8 @@ h1 {
 
 
 
+/* THINK I ADDED THIS AND THEN COMMENTED IT OUT
+
 /*@media only screen and (min-width:300px) and (max-width: 1000px) {
 	
 	.box {
@@ -59,12 +115,15 @@ h1 {
 	
 } */
 
-/*seems to impact font for text around squares board, should not be this way */
+
+/*this section seems to impact font for text around squares board, should not be this way */
+
+/* COMMENTING OUT FOR NOW SO THAT BANNER IMAGE/TEXT CENTERS PROPERLY
 p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 1em;  /* impacts size of text "Please fill out..." on squares page */
-  line-height: 1.65em; /* height of banner image */
+  font-size: 1em;  /* COMMENT impacts size of text "Please fill out..." on squares page
+  line-height: 1.65em; /* COMMENT height of banner image 
   margin: 0.6em auto 0.6em auto;
   padding: 0;
   width: 23em;
@@ -73,6 +132,9 @@ p {
 p.small {
   font-size: 0.8em;
 }
+END COMMENTING OUT*/
+
+
 
 a,
 a:visited,
@@ -90,17 +152,19 @@ a:hover {
 .google-visualization-table-tr-even,
 .google-visualization-table-tr-even td,
 .google-visualization-table-tr-even-nonstrict {
-background-color: lightgrey !important;  /*color of row fill*/
+background-color: lightblue !important;  /*color of row fill*/
 color: #333 !important; /*text color */
 font-weight: bold;
+font-size: 1.05em; /* change for different screen widths */
 }
 /*create every other row of table starting on second player (2nd row after header) */
 .google-visualization-table-tr-odd,
 .google-visualization-table-tr-odd td,
 .google-visualization-table-tr-odd-nonstrict {
-background-color: gray !important; /*color of row fill*/
+background-color: lightgray !important; /*color of row fill*/
 color: #333 !important; /*color of text */
 font-weight: bold;
+font-size: 1.05em; /*change for different screen widths */
 }
 
 /* color changes when highlight a cell in the table
@@ -132,9 +196,10 @@ font-weight: bold;
 .google-visualization-table-tr-head,
 .google-visualization-table-tr-head td,
 .google-visualization-table-tr-head-nonstrict {
-background-color: black !important;
+background-color: red !important;
 background-image: none !important;
 color: #fff !important;
+font-size: 1.5em; /*change for different screen widths */
 }
 
 .google-visualization-table .gradient {

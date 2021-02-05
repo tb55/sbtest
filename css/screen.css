@@ -1,49 +1,37 @@
-/*.my-bg-photo, .bg-secondary, .text-white, .py-5, .text-center, .shadow {
-  position: fixed;
-}
 
-
-@media only screen and (max-width:600px) {
-  .my-bg-photo, .bg-secondary, .text-white, .py-5, .text-center, .shadow {
-    position:absolute;
-  }
-}
-*/
-
-/*
-.hero {
-  background-image: url('images/packers.jpg');
-  background-attachment: fixed; 
-  background-position: center center;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-}
-*/
-
-/*
-
-.center {
-  text-align:center;
-}
-
-
-.center_justify {
-  margin-left: auto;
-  margin-right: auto;
-  width: 30em;  COMMENT WORKS ON LARGE SCREEN, NEED TO REDUCE THIS FOR SMALLER SCREENS, THIS ALSO MESSES UP the banner imagew on small screens and seahawks graphic is now gone
-}
-
-*/
-
+/* figure out why we have this?? */
 h1 {
   font-weight: bold;
 }
 
+.center {
+  /* removed original flexbox code and replaced with text-align: center */
+  /* display: flex;
+  justify-content: center; */
+  width: 86vw;  /* need this to correctly center the "Leader Board" text on the page */
+  font-size: 2.5em;
+  text-align: center;
+}
+
+  
+.list-center-justify {
+    display: grid;
+    place-items: center;
+}
+  
+
+#prizes {
+  display: flex;
+  justify-content: center;
+  width: 86vw;  /* centers list of prizes */
+}
+
+
+
 .my-bg-photo {
-  background: url('images/sb1.jpg') no-repeat;
+  background: url('images/super-bowl-55.jpg') no-repeat;
   background-size: cover;
-  background-position: 50% 6%; /* pushes picture up slightly */
+  background-position: 50% 18%; /* pushes picture up slightly */
   position: relative;
 }
 
@@ -64,6 +52,62 @@ h1 {
   opacity: .65;
 }
 
+.my-bg-photo-2 {
+  background: url('images/sb1.jpg') no-repeat;
+  background-size: cover;
+  background-position: 50% 22%;
+  position: relative;
+}
+.my-bg-photo-2 * {
+  position: relative;
+  z-index: 10;
+}
+
+.my-bg-photo-2:before {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: .65;
+}
+
+.my-bg-photo-1 {
+  background: url('images/super-bowl-picture.jpg') no-repeat;
+  background-size: cover;
+  background-position: 50% 18%;  
+  position: relative;
+}
+
+@media (max-width: 450px){
+	.my-bg-photo-1 {
+		background-position: 40% 8%;  /* picture needs to shift a little to the rigth on iphones */
+		
+	}
+}
+
+
+
+
+.my-bg-photo-1 * {
+  position: relative;
+  z-index: 10;
+}
+
+.my-bg-photo-1:before {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: .65;
+}
 
 .my-custom-container {
   max-width: 800px;

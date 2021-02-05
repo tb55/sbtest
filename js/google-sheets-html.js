@@ -16,7 +16,7 @@ function drawVisualization() {
     //var query = new google.visualization.Query('https://docs.google.com/tq?key=1VI5-YacQoKISys2538DCT5zkqzLj8T6OwlXQ6DhvfX4&output=html&usp=sharing');
     //
     var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/14oq4vYSem8eqA0AyKrFEjcn6m_jxvQ_Wit-oXzT75Sc/gviz/tq?tqx=out:html&tq&');
-    var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/14oq4vYSem8eqA0AyKrFEjcn6m_jxvQ_Wit-oXzT75Sc/gviz/tq?tqx=out:html&tq&');
+    //var query = new google.visualization.Query('https://docs.google.com/spreadsheets/d/14oq4vYSem8eqA0AyKrFEjcn6m_jxvQ_Wit-oXzT75Sc/gviz/tq?tqx=out:html&tq&');
     //query.setQuery('SELECT A, B, C, D label A "Duration", B "Song", C "Requested By", D "URL"');
     query.setQuery('SELECT A, B, C label A "Name", B "Score", C "Place"');
     query.send(handleQueryResponse);

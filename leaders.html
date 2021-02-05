@@ -3,23 +3,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trilling Bowl</title>
+    <link rel="stylesheet" href="css/screen.css" />
+
+
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/screen.css" />   <!--style sheet for top of page-->
-    <link href="css/normalize.css" rel="stylesheet">  <!--style sheet for table of scores-->
-    <link href="css/main.css" rel="stylesheet">       <!--another style sheet for table of scores-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> <!--for Google Sheets API??-->
-    <script src="https://www.gstatic.com/charts/loader.js"></script>  <!--find out what this is for-->
+    
+    
+    <!-- <link rel="stylesheet" href="css/screen.css" />   COMMENT style sheet for top of page--> 
+    
+    
+    <link href="css/normalize.css" rel="stylesheet">  <!--COMMENT style sheet for table of scores -->
+   <link href="css/main.css" rel="stylesheet">       <!--REMOVING THIS SHEET FIXES LINK COLORS -->
+    
+    
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  <!--COMMENT for Google Sheets API??-->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>  <!--COMMENT find out what this is for-->
+    
   
+
+
   </head>
   <body>
-  
- 
-  <div class="my-bg-photo bg-secondary text-white py-5 text-center shadow">
+    <div class="my-bg-photo bg-secondary text-white py-5 text-center shadow">
       <h1 class="display-4">Trilling Bowl 55</h1>
       <p class="lead mb-0">We get young people interested in gambling</p>
     </div>
- 
 
     <div class="container my-custom-container pt-3">
       <nav class="mb-3">
@@ -31,42 +42,57 @@
             <a class="nav-link" href="squares.html">Squares</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="questions.html">Questions</a>
+            <a class="nav-link" href="answers.html">Answers</a>
           </li>
         </ul>
       </nav>
     
-
-    <body id="background">
-      <div id="box">
-
-        <ul>
-          <h1>Leader Board</h1>
+     
+       
+      
+      <!-- <div class="col-md-7"> -->
           
-          <li>Payouts for top 3 finishers at the end of the game:</li>
-          
-            <ul>
-              <li>1st Place: $50</li>
-              <li>2nd Place: $40</li>
-              <li>3rd Place: $30</li>
-            </ul>
-          </li>
-        </ul>
-        <div id="player updates">
-          <h3>Brian Kiley doing very wildly great!</h3>
+          <h1 class="center">Leader Board</h1>
+          <p class="lead" id="prizes">1st place: $50 <br> 2nd place: $30 <br> 3rd place: $20</p>
+                
+          <!--
+          <div class="stripey">
+            <p>Brian Kiley in the lead!<br>Mahomes4EVAis gaining fast!<br>The price of Bitcoin is up from 32,880 at kickoff to 36,282</p>
+          </div>     
+        -->
+     
+      <!-- </div> --> 
+
+        <div class="list-center-justify">
+        <ul style="font-weight:bold">
+          <li> <span style="color:blue">Brian Kiley in the lead</span></li>
+          <li>Mahomes4EVA is gaining!</li>
+          <li> <span style="color: blue">Bitcoin was $32,558 at kickoff, now at $38,680! </span></li>
+        </ul> 
         </div>
-
-        <script src="js/google-sheets-html.js" type="text/javascript"></script>
-        <div id="table"> </div>
+  
+      
+    
+      <div id="background">
+        <div id="box">
+          <script src="js/google-sheets-html.js" type="text/javascript"></script>
+          <div id="table"></div>
+        </div>
       </div>
-    </div>
-      <footer class="border-top mt-5 py-4 text-center text-muted small">
-      <p>&copy; 2021 Trilling Bowl</p>
-    </footer>
+      
+    
 
-    <!-- JavaScript and dependencies 
+  
+    
+    <footer class="border-top mt-5 py-4 text-center text-muted small">
+      <p>&copy; Trilling Bowl 55</p>
+    </footer>
+  
+
+    <!-- JavaScript and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    -->
+
+   </div> 
   </body>
 </html>

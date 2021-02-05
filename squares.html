@@ -2,14 +2,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trilling Bowl</title>
+    <title>Trilling Bowl 55</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/screen.css" /> <!--main screen stylesheet-->
-    <link rel="stylesheet" href="css/mystyle.css"> <!--squares stylesheet-->
+    <link rel="stylesheet" href="css/screen.css" />
+    <link rel="stylesheet" href="css/squares.css"> <!--squares stylesheet-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    
   </head>
   <body>
-    <div class="my-bg-photo bg-secondary text-white py-5 text-center shadow">
+    <div class="my-bg-photo-1 bg-secondary text-white py-5 text-center shadow">
       <h1 class="display-4">Trilling Bowl 55</h1>
       <p class="lead mb-0">We get young people interested in gambling</p>
     </div>
@@ -24,129 +27,129 @@
             <a class="nav-link active" href="#">Squares</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="questions.html">Questions</a>
+            <a class="nav-link" href="answers.html">Answers</a>
           </li>
         </ul>
       </nav>
-    </div> 
-      <ul>
-        <h1>Super Bowl Squares</h1>
-        <li>Winner of each quarter is determined by the last digit of each team's score at the end of the quarter</li>
-        
-        <ul>
-          <li>1st Quarter Winner: $30</li>
-          <li>2nd Quarter Winner: $40</li>
-          <li>3rd Quarter Winner: $50</li>
-          <li>End-of-Game Winner: $100</li>
-        </ul>
-      </ul>
+
+
       
+      <h1 class="center">Super Bowl Squares</h1>
+      <h2 style= "font-weight:normal; font-size:1.3em" class="center">Prizes awarded after each quarter based on last digit of each team's score</h2>
+      <p class="lead" id="prizes">1st quarter end: $20<br> 2nd quarter end: $20 <br> 3rd quarter end: $20 <br> 4th quarter end: $40</p>
+      
+      <div class="list-center-justify">
+        <ul style="font-weight:bold">
+          <li> <span style="color:blue">Brian Kiley in the lead</span></li>
+          <li>Mahomes4EVA is gaining!</li>
+          <li> <span style="color: blue">Bitcoin was $32,558 at kickoff, now at $38,680! </span></li>
+        </ul> 
+        </div>
+      
+        <table id="main">
+          <tr>
+              <td></td>
+            
+              <td style="text-align: center" id="horizontal_table">  <!--700 for large screen, 860 for small screen padding COMMENT adding 650 padding on large screen so that everything would line and 860 on small screen up ADDED 410 BEFORE-->
+              
+               
+              <img src="css/images/Chiefs_460x68_v3.png" id="horizontal_team_logo"> 
+              
+              <!--COMMENT was originally width=660, then 460 for large screens and no height at all, and 330/40 for iphone -->
+              
     
-      <table id="main">
-      <tr>
-          <td></td>
-        
-          <td style="text-align: center" id="horizontal_table">  <!--700 for large screen, 860 for small screen padding COMMENT adding 650 padding on large screen so that everything would line and 860 on small screen up ADDED 410 BEFORE-->
+            
+    
+            </td>
           
-           
-          <img src="css/images/Chiefs_460x68.png" id="horizontal_team_logo"> 
-          
-          <!--COMMENT was originally width=660, then 460 for large screens and no height at all, and 330/40 for iphone -->
-          
-
-        
-
-        </td>
-      
-
-        <td></td>
-      </tr>    
-      <tr>
-
-        
-          <td style="vertical-align: top; padding-top: 15px">
-              <img src="css/images/Buccaneers_68x1460.png" id="vertical_team_logo">  <!--was height=650,then 460 for large screens and 330/40 for iphone-->
-          </td>
-        
-          <td id="board">
-              <canvas id="canvas" width="680" height="680">
-                  <p>
-                      You can't see these paragraphs if your browser supports HTML5 canvas. <br>
-                      If you can see them, that means you can't see my superbowl squares. <br>
-                      You should consider downloading a newer browser! 
+    
+            <td></td>
+          </tr>    
+          <tr>
+    
+            
+              <td style="vertical-align: top; padding-top: 15px">
+                  <img src="css/images/Buccaneers_68x460.png" id="vertical_team_logo">  <!--was height=650,then 460 for large screens and 330/40 for iphone-->
+              </td>
+            
+              <td id="board">
+                  <canvas id="canvas" width="680" height="680">
+                      <p>
+                          You can't see these paragraphs if your browser supports HTML5 canvas. <br>
+                          If you can see them, that means you can't see my superbowl squares. <br>
+                          You should consider downloading a newer browser! 
+                      </p>
+                  </canvas>
+              </td>
+              
+              <!--           
+              <td id="rules">                    
+                  <h2>Rules</h2>
+                  <ul>
+                      <li>Cost is $5 per square (limit 5 squares per player).</li>
+                      <li>Numbers will be chosen randomly after all squares have been purchased.</li>
+                      <li>Payoff based upon the last digit of each team's score.</li>
+                      <br>
+                      <li>Every score change (including extra points) gets $20.</li>
+                      <li>End of 1st, half, and 3rd each get $30.</li>
+                      <li>Final score gets remaining money (if any).</li> 
+                      <li>Prizes are awarded until the money runs out.</li>
+                  </ul>
+                  <p> 
+                      Please fill out the following form with your first name, last name, and email address, and 
+                      select the squares you would like to pick by clicking them on the board.<br><br>
+                      Once you've finished, click the Submit button below to submit your squares. 
                   </p>
-              </canvas>
-          </td>
+                  COMMENT REMOVED HERE
+                  <form name="myForm" action="insertData.php" method="post" onSubmit="return validateData(this)">
+                      <label>First Name:</label> <input type="text" name="first_name" value="" maxlength="15" required><br>
+                      <label>Last Name:</label> <input type="text" name="last_name" value="" maxlength="15" required><br>
+                      <label>E-mail:</label> <input type="email" name="email" value="" maxlength = "50" required><br>
+                      <input type="hidden" name="squares" value="">
+                      <br>
+                      <label></label><input id="button" type="submit" value="Submit" onclick="setSquaresValue()">
+                  </form>
+                -->
+                                <!--                    
+                  <h2> Scoreboard </h2>
+                  <table id="player-info">
+                      <tr>
+                          <th> DEN </th>
+                          <th> SEA </th>
+                          <th> Winner </th>
+                          <th> Reason </th>
+                          <th> Amount </th>
+                      </tr>
+                      <script src="js/generateWinnersTable.js"></script>                      
+                  </table>
+                  -->
+              <!-- </td>  -->
           
-          <!--           
-          <td id="rules">                    
-              <h2>Rules</h2>
-              <ul>
-                  <li>Cost is $5 per square (limit 5 squares per player).</li>
-                  <li>Numbers will be chosen randomly after all squares have been purchased.</li>
-                  <li>Payoff based upon the last digit of each team's score.</li>
-                  <br>
-                  <li>Every score change (including extra points) gets $20.</li>
-                  <li>End of 1st, half, and 3rd each get $30.</li>
-                  <li>Final score gets remaining money (if any).</li> 
-                  <li>Prizes are awarded until the money runs out.</li>
-              </ul>
-              <p> 
-                  Please fill out the following form with your first name, last name, and email address, and 
-                  select the squares you would like to pick by clicking them on the board.<br><br>
-                  Once you've finished, click the Submit button below to submit your squares. 
-              </p>
-              COMMENT REMOVED HERE
-              <form name="myForm" action="insertData.php" method="post" onSubmit="return validateData(this)">
-                  <label>First Name:</label> <input type="text" name="first_name" value="" maxlength="15" required><br>
-                  <label>Last Name:</label> <input type="text" name="last_name" value="" maxlength="15" required><br>
-                  <label>E-mail:</label> <input type="email" name="email" value="" maxlength = "50" required><br>
-                  <input type="hidden" name="squares" value="">
-                  <br>
-                  <label></label><input id="button" type="submit" value="Submit" onclick="setSquaresValue()">
-              </form>
-            -->
-                            <!--                    
-              <h2> Scoreboard </h2>
-              <table id="player-info">
-                  <tr>
-                      <th> DEN </th>
-                      <th> SEA </th>
-                      <th> Winner </th>
-                      <th> Reason </th>
-                      <th> Amount </th>
-                  </tr>
-                  <script src="js/generateWinnersTable.js"></script>                      
-              </table>
-              -->
-          <!-- </td>  -->
+          
+          </tr>
+      </table>
       
       
-      </tr>
-  </table>
-  
-  
-  
-  
-  
-  <!--  <script src="js/validateData.js"></script>  -->
-  <script src="js/drawBoard2.js"></script>  <!--JS to draw squares-->
-  <script>
-  function setSquaresValue(){
-      document.myForm.squares.value = mysquares;
-  }
-  </script> 
-
-
-
+      
+      
+      
+      <!--  <script src="js/validateData.js"></script>  -->
+      <script src="js/drawBoard2.js"></script>  <!--JS to draw squares-->
+      <script>
+      function setSquaresValue(){
+          document.myForm.squares.value = mysquares;
+      }
+      </script> 
+    
+    
 
     <footer class="border-top mt-5 py-4 text-center text-muted small">
-      <p>&copy; 2020 My Site</p>
+      <p>&copy; Trilling Bowl 55</p>
     </footer>
 
-    <!-- JavaScript and dependencies
+    <!-- JavaScript and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-    -->
+  </div>
   </body>
 </html>
