@@ -29,7 +29,7 @@ h1 {
 
 
 .my-bg-photo {
-  background: url('images/super-bowl-55.jpg') no-repeat;
+  background: url('images/Super-Bowl-55.jpg') no-repeat;
   background-size: cover;
   background-position: 50% 18%; /* pushes picture up slightly */
   position: relative;
