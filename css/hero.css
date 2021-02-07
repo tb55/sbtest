@@ -58,6 +58,14 @@ body {
 }
 
 
+/* show different image on devices in landscape mode - height greater than width */
+@media (orientation: portrait){
+  .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("images/trophy3.jpg");
+  }
+}
+
+
 
 .hero h1 {
   font-size: 3em;  /*font size for header text */

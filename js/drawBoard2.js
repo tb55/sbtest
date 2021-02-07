@@ -2,18 +2,30 @@ const p = 10;  //starting coordinates of table are (p,p)
 var width;  //width of a square - 42 for computer screens, 30 for iphone 11 pro max screens
 
 
-if (screen.width > 450) {
+if (screen.width >450) {
     screen_width="monitor";
-} else if (screen.width <=450) {
+} else if (screen.width >=400 && screen.width<=450 ) {
     screen_width="iphone pro max";
-}        
+} else if (screen.width < 400) {
+    screen_width="iphone x";
+} 
+
+//else if (screen.width >=810 && screen.width<=840) {
+//    screen_width="ipad pro 11 inch";
+//}     
+
 
 if (screen_width=="monitor") {
     width = 42; //large monitor screen
     console.log("large screen");
 } else if (screen_width=="iphone pro max") {
     width = 30;  //iphone pro max
-}
+} else if (screen_width=="iphone x") {
+    width=27; //iphone X
+} else if (screen_width=="ipad pro 11 inch")
+    width=60;//
+
+
 const len = width*11; //width of table, should be 11x the width of a square 
 
 
@@ -45,15 +57,17 @@ function drawGrid(){
 
 function fillBoxes()
 {    
-    const taken_squares = [[2,3,6], [4,7,9], [16,20], [30,40]]; // add correct info here 
-    const player_names = ["Fred Jones", "Sally Smith", "Fred Johnson", "Ruth Jackson"];  //add correct info here
-    const winning_squares=[2,3,20,30];  //add correct winning squares here
+    const taken_squares = [[1,6,11], [4,7,9], [16,20], [30,40]]; // add correct info here 
+    const player_names = ["Test", "Test", "Test", "Test"];  //add correct info here
+    const winning_squares=[1,3,20,30];  //add correct winning squares here
     if (screen_width=="monitor") {
         context.font="11px Arial bold";  // 11px font for full-size monitor screen
         console.log("11px font")
     } else if (screen_width=="iphone pro max") {
         context.font="8px Arial bold";  //8 px font for iphone 11 pro max
         console.log("8px font");
+    } else if (screen_width=="iphone x") {
+        context.font="7px Arial bold";
     }
      
     context.textAlign="center";
@@ -123,14 +137,16 @@ function placeNumbers() {
     var arr2 = [3,9,2,7,5,1,8,0,4,6];
 
     if (screen_width=="monitor") {
-        context.font="20px Arial";  // 20px font for full-size monitor screen
+        context.font="24px Arial";  // 20px font for full-size monitor screen
     } else if (screen_width=="iphone pro max") {
-        context.font="16px Arial";  //16 px font for iphone 11 pro max
+        context.font="18px Arial";  //16 px font for iphone 11 pro max
+    } else if (screen_width=="iphone x") {
+        context.font="17px Arial"; //15 px font for iphone x
     }
 
     context.textAlign="center";
     context.textBaseline="middle"; 
-    context.fillStyle="white";  //font color of numbers (can also do different colors for horizontal and vertical if desired, add these in loop below)
+    context.fillStyle="black";  //font color of numbers (can also do different colors for horizontal and vertical if desired, add these in loop below)
     for (var x = 0; x < 10; x++) { 
      context.fillText(arr1[x], (2/3)*width+3, (5/3)*width+6 + (width*x));  //added variables, original below
      context.fillText(arr2[x], (5/3)*width + 3 + (width*x), (2/3)*width + 6);  //added variables, original below
@@ -152,7 +168,9 @@ function drawThickBorders() {
     if (screen_width=="monitor") {
         context.lineWidth=2;  // border thickness for full size monitor screen
     } else if (screen_width=="iphone pro max") {
-        context.lineWidth=1;  //border thickness for iphone prox max
+        context.lineWidth=1;  //border thickness for iphone pro max
+    } else if (screen_width=="iphone x") {
+        context.linewidth=1; //border thickness for iphone X
     }
         
     context.stroke();

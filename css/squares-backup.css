@@ -8,6 +8,7 @@ input {
 	display: inline-block;
 }
 
+
 /* removed this, was in the original code, it's changing the fonts for the whole page including on the banner 
 body {
 	background-color: #F8F8F8;
@@ -41,16 +42,13 @@ ul {
 #main {
 	border-collapse:collapse;
 	width: 1250px;  
-	/* margin: 10px 10px 10px 10px; */  
+	/*margin: 10px 10px 10px 10px; */
 }
 
-
-
-/* regular computer monitor */ 
+/* regular computer monitor */
 #horizontal_table {
 	padding-right: 800px;
 }
-
 
 /* iphone 11 pro max */
 @media only screen and (min-width: 400px) and (max-width: 450px){
@@ -68,13 +66,12 @@ ul {
 }
 
 
-/*regular computer monitor */
+/* regular computer monitor */
 #horizontal_team_logo {
 	width: 460px;
 	height: 60px;
 	margin-left: 10px;
 }
-
 
 /*iphone pro max */
 @media only screen and (min-width: 400px) and (max-width: 450px){
@@ -94,14 +91,13 @@ ul {
 	}
 }
 
-/*regular computer monitor */
+/* regular computer monitor */
 #vertical_team_logo {
 	height: 460px;
 	width: 60px;
 	margin-left: 180px;
 	
 }
-
 
 /* iphone 11 pro max */
 @media only screen and (min-width: 400px) and (max-width: 450px) {
@@ -136,8 +132,6 @@ ul {
 }
 */
 
-
-
 #player-info {
 	border-collapse:collapse;
 	border: 1px solid black;
@@ -157,8 +151,8 @@ ul {
 	text-align: center;
 }
 
- 
-/*This button was generated using CSSButtonGenerator.com */
+
+/* This button was generated using CSSButtonGenerator.com */
 #button {
 	-moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
@@ -204,5 +198,3 @@ ul {
 	position:relative;
 	top:1px;
 }
-
-

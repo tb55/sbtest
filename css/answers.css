@@ -1,0 +1,47 @@
+
+.all_responses {
+    margin-left:75px;
+    margin-right: 100px;  
+}
+
+@media (max-width: 450px){
+	.all_responses {
+		margin-left: 40px;
+        margin-right:40px; 		
+	}
+}
+
+
+
+.brsmall {
+    display: block;
+    margin-bottom: .4em;
+}
+
+
+.question {
+    margin-left: 75px;
+    margin-right: 100px;
+    font-weight: 550;
+}
+
+.answer {
+    margin-left: 100px;
+    margin-right: 75 px;
+}
+
+@media (max-width: 450px){
+	.question {
+		margin-left: 30px;
+        margin-right:30px; 		
+	}
+}
+
+@media (max-width: 450px){
+	.answer {
+		margin-left: 40px;
+        margin-right:40px; 		
+	}
+}
+
+
