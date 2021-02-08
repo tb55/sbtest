@@ -2,18 +2,13 @@ const p = 10;  //starting coordinates of table are (p,p)
 var width;  //width of a square - 42 for computer screens, 30 for iphone 11 pro max screens
 
 
-if (screen.width >450) {
+if (screen.width > 450) {
     screen_width="monitor";
-} else if (screen.width >=400 && screen.width<=450 ) {
+} else if (screen.width>=400 && screen.width <=450) {
     screen_width="iphone pro max";
 } else if (screen.width < 400) {
     screen_width="iphone x";
-} 
-
-//else if (screen.width >=810 && screen.width<=840) {
-//    screen_width="ipad pro 11 inch";
-//}     
-
+}       
 
 if (screen_width=="monitor") {
     width = 42; //large monitor screen
@@ -22,9 +17,7 @@ if (screen_width=="monitor") {
     width = 30;  //iphone pro max
 } else if (screen_width=="iphone x") {
     width=27; //iphone X
-} else if (screen_width=="ipad pro 11 inch")
-    width=60;//
-
+} 
 
 const len = width*11; //width of table, should be 11x the width of a square 
 
@@ -56,20 +49,25 @@ function drawGrid(){
 }
 
 function fillBoxes()
-{    
-    const taken_squares = [[1,6,11], [4,7,9], [16,20], [30,40]]; // add correct info here 
-    const player_names = ["Test", "Test", "Test", "Test"];  //add correct info here
-    const winning_squares=[1,3,20,30];  //add correct winning squares here
+{   //squares
+    const taken_squares = [[1,16,30,34,80], [2,17,28,33,41,45,49,50,67,69,82,94], [3,11,64,90,98], [4,27,39,83,86],
+        [5,13,19,40,47,52,71,76,85,96], [6,12,51,56,74], [7,14,32,43,66,68,75,79,87,100], [55,59,70,73,77,91],
+        [8,24,36,62,93],[9,21,53,84], [10,31,48,72,97],[15,23,26,37,54,61,78,89,92], [18,22,63,88,95], [20,25,42,81,99],
+        [29,35,38,44,46,57,58,60,65]];  
+    const player_names = ["Jeremy Umland", "Lisa Ginsberg", "Julian Goldstein", "Rachel Umland",
+    "Brian Kiley","Ben Sherwood", "Jon Weiman", "Steve Trilling", "Wendi Trilling", "Kosner Family",
+    "Karen Umland", "Joe Trilling","Alex Umland","Ali Kiley","Max Trilling"];  
+    const winning_squares=[21,80];  //add correct winning squares here
     if (screen_width=="monitor") {
         context.font="11px Arial bold";  // 11px font for full-size monitor screen
         console.log("11px font")
     } else if (screen_width=="iphone pro max") {
         context.font="8px Arial bold";  //8 px font for iphone 11 pro max
         console.log("8px font");
-    } else if (screen_width=="iphone x") {
+    }  else if (screen_width=="iphone x") {
         context.font="7px Arial bold";
     }
-     
+
     context.textAlign="center";
     for (var i = 0; i < taken_squares.length; i++) {
         var first_last = player_names[i].split(' ');
@@ -137,13 +135,12 @@ function placeNumbers() {
     var arr2 = [3,9,2,7,5,1,8,0,4,6];
 
     if (screen_width=="monitor") {
-        context.font="24px Arial";  // 20px font for full-size monitor screen
+        context.font="24px Arial";  // 24px font for full-size monitor screen
     } else if (screen_width=="iphone pro max") {
-        context.font="18px Arial";  //16 px font for iphone 11 pro max
+        context.font="18px Arial";  //18 px font for iphone 11 pro max
     } else if (screen_width=="iphone x") {
-        context.font="17px Arial"; //15 px font for iphone x
+        context.font="17px Arial"; //17 px font for iphone x
     }
-
     context.textAlign="center";
     context.textBaseline="middle"; 
     context.fillStyle="black";  //font color of numbers (can also do different colors for horizontal and vertical if desired, add these in loop below)
@@ -168,7 +165,7 @@ function drawThickBorders() {
     if (screen_width=="monitor") {
         context.lineWidth=2;  // border thickness for full size monitor screen
     } else if (screen_width=="iphone pro max") {
-        context.lineWidth=1;  //border thickness for iphone pro max
+        context.lineWidth=1;  //border thickness for iphone prox max
     } else if (screen_width=="iphone x") {
         context.linewidth=1; //border thickness for iphone X
     }
