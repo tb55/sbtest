@@ -57,7 +57,7 @@ function fillBoxes()
     const player_names = ["Jeremy Umland", "Lisa Ginsberg", "Julian Goldstein", "Rachel Umland",
     "Brian Kiley","Ben Sherwood", "Jon Weiman", "Steve Trilling", "Wendi Trilling", "Kosner Family",
     "Karen Umland", "Joe Trilling","Alex Umland","Ali Kiley","Max Trilling"];  
-    const winning_squares=[21,80];  //add correct winning squares here
+    const winning_squares=[21,80,72];  //add correct winning squares here
     if (screen_width=="monitor") {
         context.font="11px Arial bold";  // 11px font for full-size monitor screen
         console.log("11px font")
